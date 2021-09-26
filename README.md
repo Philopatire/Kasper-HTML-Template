@@ -8,6 +8,7 @@ I have to write their names for their copyright
 3. The Icons from [Font Awesome 5 Free](https://fontawesome.com/).
 4. I use [normalize](https://necolas.github.io/normalize.css/) CSS framework 
 5. I use [Open Sans](https://fonts.google.com/specimen/Open+Sans) Font.
+6. The Videos from [Pexels](https://www.pexels.com/)
 
 *Finally, I hope to be happy with my template.*
 
