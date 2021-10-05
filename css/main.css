@@ -500,6 +500,7 @@ header .bullet span:hover {
 }
 .portfolio-caption .text p {
 	margin-bottom: 35px;
+	color: #fff;
 }
 .portfolio-caption .text button {
 	background-color: #000;
@@ -530,43 +531,41 @@ header .bullet span:hover {
 .about {
 	padding-top: var(--section-padding);
 	overflow: hidden;
-	position: relative;
 }
 .about img {
 	display: block;
 	margin: 0 auto -50px;
 	width: 70%;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.about img {
 		margin-bottom: -25px;
 	}
 }
 /* Caption */
 .about-caption {
-	position: relative;
 	background-image: url(../imgs/backgrounds/about.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	padding: var(--section-padding) 0;
+	position: relative;
 }
 .about-caption .container {
-	position: relative;
 	background-color: var(--main-color-transparent);
 	display: flex;
-	padding-bottom: 30px;
-	width: 70%;
 	flex-wrap: wrap;
+	padding: 30px 0 10px;
+	width: 70%;
 	text-align: center;
 	color: #fff;
+	position: relative;
 }
 .about-caption .container .static {
 	flex-basis: 25%;
-	text-align: center;
+	margin-bottom: 20px;
 }
 .about-caption .container .static i {
 	font-size: 15px;
-	position: relative;
 	background-color: black;
 	width: 30px;
 	height: 30px;
@@ -574,7 +573,7 @@ header .bullet span:hover {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	margin: 30px auto 20px;
+	margin: 0 auto 20px;
 }
 .about-caption .container .static h4 {
 	font-size: 40px;
@@ -583,40 +582,44 @@ header .bullet span:hover {
 	color: #fff;
 }
 @media (max-width: 767px) {
+	.about-caption .container {
+		width: 80%;
+	}
 	.about-caption .container .static {
 		flex-basis: 50%;
 	}
 }
 @media (max-width: 540px) {
+	.about-caption .container {
+		width: 90%;
+	}
 	.about-caption .container .static {
 		flex-basis: 100%;
 	}
 }
 /* End Caption */
+/* End About */
 /* Information */
-.inform .container {
+.inform {
 	padding: var(--section-padding) 0;
+}
+.inform .container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .inform .container > div {
-	width: 95%;
-	margin: 30px auto 0;
+	margin: 0 auto 30px;
+	flex-basis: 90%;
+	text-align: center;
 }
 .inform .container > div > h3 {
-	text-align: center;
-	font-weight: normal;
+	font-weight: 400;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 }
 .inform .container > div > p {
-	text-align: center;
-	width: 80%;
 	margin: 0 auto 50px;
-}
-.inform .container .testimonials {
-	overflow: hidden;
 }
 .inform .container .testimonials .user {
 	display: flex;
@@ -628,7 +631,6 @@ header .bullet span:hover {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
-	margin-right: 25px;
 	margin-bottom: 25px;
 }
 .inform .container .testimonials .user .text {
@@ -647,32 +649,12 @@ header .bullet span:hover {
 	right: 0;
 	font-style: italic;
 }
-.inform .container .testimonials .bullets {
-	margin: 0 auto;
-	width: 65px;
-	display: flex;
-	justify-content: space-evenly;
-}
-.inform .container .testimonials .bullets span {
-	width: 14px;
-	height: 14px;
-	border: 1px solid #000;
-	display: block;
-	border-radius: 50%;
-	transition: var(--transition-duration);
-	cursor: pointer;
-}
-.inform .container .testimonials .bullets span.active,
-.inform .container .testimonials .bullets span:hover {
-	background-color: var(--main-color);
-	border: none;
-}
 .inform .container .skills .skill {
 	margin-bottom: 25px;
 }
 .inform .container .skills .skill h4 {
 	text-transform: uppercase;
-	font-weight: normal;
+	font-weight: 400;
 	margin-bottom: 5px;
 }
 .inform .container .skills .skill .progress {
@@ -684,8 +666,7 @@ header .bullet span:hover {
 	height: 100%;
 	display: block;
 	position: relative;
-	animation: smooth-width 1.5s;
-	-webkit-animation: smooth-width 1.5s;
+	animation: smooth-progress 1.5s;
 }
 .inform .container .skills .skill .progress span::before {
 	content: attr(data-progress);
@@ -696,41 +677,35 @@ header .bullet span:hover {
 	border-radius: 3px;
 	top: -32px;
 	font-size: 12px;
-	right: -17px;
+	right: -16px;
 }
 .inform .container .skills .skill .progress span::after {
 	content: "";
 	position: absolute;
-	width: 0px;
-	height: 0px;
-	border-width: 9px;
-	border-style: solid;
+	border: 9px solid;
 	border-color: #353235 transparent transparent;
 	right: -8px;
 	top: -11px;
-	z-index: -1;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
 	.inform .container > div {
 		flex-basis: 45%;
-		margin-top: 0;
+		margin-bottom: 0;
 	}
 	.inform .container .testimonials .user {
 		flex-direction: row;
 	}
 	.inform .container .testimonials .user img {
 		margin-bottom: 0;
+		margin-right: 25px;
 	}
 	.inform .container .testimonials .user .text {
 		text-align: left;
 	}
 }
-@keyframes smooth-width {
+@keyframes smooth-progress {
 	from {
 		width: 0%;
-	}
-	to {
-		width: attr(data-progress);
 	}
 }
 /* End Information */
@@ -739,104 +714,92 @@ header .bullet span:hover {
 	background-image: url(../imgs/backgrounds/testimonials.jpg);
 	background-size: cover;
 	background-attachment: fixed;
-	height: 250px;
 	position: relative;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .inform-caption .text {
-	position: absolute;
-	top: 50%;
-	margin: 0 auto;
-	width: 100%;
-	transform: translate(-50%);
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
 	color: #fff;
 	text-align: center;
+	position: relative;
+	width: 70%;
 }
 .inform-caption .text h2 {
 	font-size: 17px;
-	width: 72%;
-	margin: 0 auto;
-	font-weight: normal;
-	line-height: 1.7;
+	font-weight: 400;
+	margin-bottom: 20px;
 }
 .inform-caption .text p {
 	color: #fff;
-	margin-top: 20px;
 }
 /* End Information Caption */
 /* End About */
-
 /* Pricing */
 .pricing {
-	padding: var(--section-padding);
+	padding: var(--section-padding) 0;
 }
 .pricing .content {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.pricing .plan {
+.pricing .content .plan {
 	flex-basis: 22%;
-	padding: 5px;
+	margin-bottom: var(--section-padding);
 }
-.pricing .plan > div {
-	padding: 0 20px;
+.pricing .content .plan > div {
 	text-align: center;
 }
-.pricing .plan .title {
+.pricing .content .plan .title {
 	border-top: 1px solid var(--main-color);
 	border-bottom: 1px solid var(--main-color);
-	padding: 15px 0;
+	padding: 25px 0;
 }
-.pricing .plan .title span {
+.pricing .content .plan .title span {
+	display: inline-block;
 	font-size: 12px;
+	margin-bottom: 10px;
 }
-.pricing .plan .title h3 {
+.pricing .content .plan .title h3 {
 	font-size: 35px;
-	padding: 15px 0;
 }
-.pricing .plan .title h3 * {
-	font-size: 13px;
+.pricing .content .plan .title h3 sup,
+.pricing .content .plan .title h3 sub {
+	font-size: 15px;
 }
-.pricing .plan .title h3 sup {
-	top: -1em;
+.pricing .content .plan .title h3 sup {
+	top: -2em;
 }
-.pricing .plan .specs h4 {
+.pricing .content .plan .specs {
+	padding: 0 35px;
+}
+.pricing .content .plan .specs h4 {
 	padding: 20px 0;
 	border-bottom: 1px solid var(--main-color);
-	font-weight: normal;
-	font-size: 13px;
+	font-weight: 400;
+	font-size: 15px;
 }
-.pricing .plan button {
+.pricing .content .plan button {
 	display: block;
 	margin: 40px auto 0;
 	padding: 10px 20px;
 	border: 1px solid var(--main-color);
-	background-color: transparent;
-	cursor: pointer;
 	transition: .3s;
 	text-transform: uppercase;
 	font-size: 12px;
 }
-.pricing .plan button:hover {
+.pricing .content .plan button:hover {
 	background-color: var(--main-color);
-}
-@media (max-width: 767px) {
-	.pricing .plan {
-		flex-basis: 44%;
-	}
+	color: #fff;
 }
 .pricing .container > h5 {
 	text-align: center;
-	margin: 40px;
-	font-weight: normal;
+	margin-bottom: 20px;
+	font-weight: 400;
 }
 .pricing .container > a {
-	text-align: center;
-	text-decoration: none;
 	color: #fff;
 	padding: 10px 20px;
 	margin: 0 auto;
@@ -846,8 +809,13 @@ header .bullet span:hover {
 	text-transform: uppercase;
 	font-size: 14px;
 }
+@media (max-width: 991px) {
+	.pricing .content .plan {
+		flex-basis: 44%;
+	}
+}
 @media (max-width: 540px) {
-	.pricing .plan {
+	.pricing .content .plan {
 		flex-basis: 100%;
 	}
 }
@@ -860,62 +828,62 @@ header .bullet span:hover {
 	position: relative;
 }
 .pricing-caption .container {
-	color: #fff;
 	position: relative;
 	display: flex;
 	align-items: center;
-	top: 50%;
-	transform: translateY(-50%);
+	flex-wrap: wrap;
+	justify-content: space-between;
+	color: #fff;
+	height: 100%;
 }
 .pricing-caption .container .email {
 	display: flex;
 	align-items: center;
+	border: 1px solid #fff;
+	width: 400px;
 }
 .pricing-caption .container .email i {
 	position: relative;
-	margin-right: 1px;
-	left: 30px;
+	left: 20px;
 }
 .pricing-caption .container .email input {
-	border: 1px solid #fff;
 	color: #fff;
 }
 .pricing-caption .container .email input[type="email"] {
 	caret-color: var(--main-color);
-	padding: 15px 20px 15px 45px;
-	width: 300px;
-	max-width: calc(100% - 170px);
-	border-right: none;
+	padding: 15px 0 15px 30px;
+	width: calc(100% - 120px);
 	background-color: transparent;
 	font-size: 12px;
+	border: none;
 }
 .pricing-caption .container .email input[type="email"]:focus {
 	outline: none;
 }
 .pricing-caption .container .email input[type="submit"] {
-	padding: 15px;
+	padding: 15px 0;
 	background-color: var(--main-color);
-	border-left: none;
 	cursor: pointer;
 	width: 120px;
 	text-transform: uppercase;
 	font-size: 12px;
+	border: none;
 }
 .pricing-caption p {
 	color: #fff;
-	margin-left: 70px;
+	max-width: 500px;
 }
 @media (max-width: 767px) {
-	.pricing-caption .container {
-		flex-direction: column;
+	.pricing-caption {
+		height: 200px;
 	}
 	.pricing-caption .container .email {
-		width: 100%;
+		width: 80%;
+		margin: 0 auto;
 	}
 	.pricing-caption p {
-		margin-top: 40px;
-		margin-left: 0;
 		text-align: center;
+		margin: 0 auto;
 	}
 }
 /* End Caption */
