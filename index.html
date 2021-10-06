@@ -25,7 +25,7 @@
   <nav>
     <div class="container">
       <a href="#" class="logo">
-        <img src="imgs/logo.png" alt="Logo" />
+        <img src="imgs/logo.png" />
       </a>
       <div class="links">
         <i class="fas fa-bars menu"></i>
@@ -47,7 +47,12 @@
 
   <!-- Header -->
   <header>
-    <div class="overlay"></div>
+    <div class="slider">
+      <div class="overlay"></div>
+      <img src="imgs/backgrounds/header-1.jpg" class="active">
+      <img src="imgs/backgrounds/header-2.jpg">
+      <img src="imgs/backgrounds/header-3.jpg">
+    </div>
     <div class="text">
       <h1>
         HELLO WORLD! <br />
@@ -131,7 +136,7 @@
   <!-- Caption -->
   <div class="services-caption">
     <div class="overlay"></div>
-    <img src="imgs/services-inside.png" alt="Mobile-Pic" />
+    <img src="imgs/services-inside.png" />
     <div class="text">
       <h3>Our Designs Comes With...</h3>
       <ul>
@@ -156,71 +161,113 @@
         </p>
       </div>
       <div class="buttons">
-        <button class="active">All</button>
-        <button>App</button>
-        <button>Photography</button>
-        <button>Web</button>
-        <button>Print</button>
+        <button class="active" data-shuffle="all">All</button>
+        <button data-shuffle="app">App</button>
+        <button data-shuffle="photography">Photography</button>
+        <button data-shuffle="web">Web</button>
+        <button data-shuffle="print">Print</button>
       </div>
       <div class="imgs">
-        <div class="image all photography">
-          <img src="imgs/portfolio/one.jpg" alt="Image1" />
+        <div class="image photography">
+          <img src="imgs/portfolio/one.jpg" />
           <div class="caption">
             <h3>Awesome Image</h3>
             <p>photography</p>
           </div>
         </div>
-        <div class="image all web">
-          <img src="imgs/portfolio/two.jpg" alt="Image2" />
+        <div class="image web">
+          <img src="imgs/portfolio/two.jpg" />
           <div class="caption">
             <h3>Awesome Image</h3>
             <p>web</p>
           </div>
         </div>
-        <div class="image all web">
-          <img src="imgs/portfolio/three.jpg" alt="Image3" />
+        <div class="image web">
+          <img src="imgs/portfolio/three.jpg" />
           <div class="caption">
             <h3>Awesome Image</h3>
             <p>web</p>
           </div>
         </div>
-        <div class="image all app">
-          <img src="imgs/portfolio/four.jpg" alt="Image4" />
+        <div class="image app">
+          <img src="imgs/portfolio/four.jpg" />
           <div class="caption">
             <h3>Awesome Image</h3>
             <p>app</p>
           </div>
         </div>
-        <div class="image all photography">
-          <img src="imgs/portfolio/five.jpg" alt="Image5" />
+        <div class="image photography">
+          <img src="imgs/portfolio/five.jpg" />
           <div class="caption">
             <h3>Awesome Image</h3>
             <p>photography</p>
           </div>
         </div>
-        <div class="image all print">
-          <img src="imgs/portfolio/six.jpg" alt="Image6" />
+        <div class="image print">
+          <img src="imgs/portfolio/six.jpg" />
           <div class="caption">
             <h3>Awesome Image</h3>
             <p>print</p>
           </div>
         </div>
-        <div class="image all print">
-          <img src="imgs/portfolio/seven.jpg" alt="Image7" />
+        <div class="image print">
+          <img src="imgs/portfolio/seven.jpg" />
           <div class="caption">
             <h3>Awesome Image</h3>
             <p>print</p>
           </div>
         </div>
-        <div class="image all print">
-          <img src="imgs/portfolio/eight.jpg" alt="Image8" />
+        <div class="image print">
+          <img src="imgs/portfolio/eight.jpg" />
           <div class="caption">
             <h3>Awesome Image</h3>
             <p>print</p>
+          </div>
+        </div>
+        <div class="image web hidden">
+          <img src=imgs/portfolio/nine.jpg alt="Image9" />
+          <div class="caption">
+            <h3>Awesome Image</h3>
+            <p>web</p>
+          </div>
+        </div>
+        <div class="image web hidden">
+          <img src=imgs/portfolio/ten.jpg alt="Image11" />
+          <div class="caption">
+            <h3>Awesome Image</h3>
+            <p>web</p>
+          </div>
+        </div>
+        <div class="image app hidden">
+          <img src=imgs/portfolio/eleven.jpg alt="Image10" />
+          <div class="caption">
+            <h3>Awesome Image</h3>
+            <p>app</p>
+          </div>
+        </div>
+        <div class="image web hidden">
+          <img src=imgs/portfolio/twelve.jpg alt="Image9" />
+          <div class="caption">
+            <h3>Awesome Image</h3>
+            <p>web</p>
+          </div>
+        </div>
+        <div class="image web hidden">
+          <img src=imgs/portfolio/theirteen.jpg alt="Image11" />
+          <div class="caption">
+            <h3>Awesome Image</h3>
+            <p>web</p>
+          </div>
+        </div>
+        <div class="image app hidden">
+          <img src=imgs/portfolio/fourteen.jpg alt="Image10" />
+          <div class="caption">
+            <h3>Awesome Image</h3>
+            <p>app</p>
           </div>
         </div>
       </div>
-      <button class="special-button">More</button>
+      <button class="special-button" data-preview="more">More</button>
     </div>
   </div>
   <!-- Caption -->
@@ -245,7 +292,7 @@
         blandit aliquet elit, eget tincidunt.
       </p>
     </div>
-    <img src="imgs/about-inside.png" alt="about">
+    <img src="imgs/about-inside.png">
   </div>
   <!-- Caption -->
   <div class="about-caption">
@@ -280,36 +327,36 @@
       <div class="testimonials">
         <h3>Testimonials</h3>
         <p>
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
           blandit aliquet elit, eget tincidunt.
         </p>
-          <div class="user">
-            <img src="imgs/testimonails-1.jpg" alt="User-1">
-            <div class="text">
-              <p>
-                Curabitur arcu erat, accumsan id imperdiet et, 
-                porttitor at sem. Mauris blandit aliquet elit, eget 
-                tincidunt.
-              </p>
-              <span>John Doe, CEO</span>
-            </div>
+        <div class="user">
+          <img src="imgs/testimonails-1.jpg">
+          <div class="text">
+            <p>
+              Curabitur arcu erat, accumsan id imperdiet et,
+              porttitor at sem. Mauris blandit aliquet elit, eget
+              tincidunt.
+            </p>
+            <span>John Doe, CEO</span>
           </div>
-          <div class="user">
-            <img src="imgs/testimonails-2.jpg" alt="User-2">
-            <div class="text">
-              <p>
-                Curabitur arcu erat, accumsan id imperdiet et, 
-                porttitor at sem. Mauris blandit aliquet elit, eget 
-                tincidunt.
-              </p>
-              <span>John Doe, CEO</span>
-            </div>
+        </div>
+        <div class="user">
+          <img src="imgs/testimonails-2.jpg">
+          <div class="text">
+            <p>
+              Curabitur arcu erat, accumsan id imperdiet et,
+              porttitor at sem. Mauris blandit aliquet elit, eget
+              tincidunt.
+            </p>
+            <span>John Doe, CEO</span>
           </div>
+        </div>
       </div>
       <div class="skills">
         <h3>Our Skills</h3>
         <p>
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
           blandit aliquet elit, eget tincidunt.
         </p>
         <div class="skill">
@@ -360,7 +407,7 @@
       <div class="heading">
         <h2>Pricing</h2>
         <p>
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
           blandit aliquet elit, eget tincidunt.
         </p>
       </div>
@@ -442,15 +489,15 @@
   <div class="pricing-caption">
     <div class="overlay"></div>
     <div class="container">
-        <form action="" class="email">
-          <i class="far fa-envelope"></i>
-          <input type="email" name="email">
-          <input type="submit" value="subscribe">
-        </form>
-        <p>
+      <form action="" class="email">
+        <i class="far fa-envelope"></i>
+        <input type="email" name="email">
+        <input type="submit" value="subscribe">
+      </form>
+      <p>
         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan
         dit aliquet elit, eget tincidunt.
-        </p>
+      </p>
     </div>
   </div>
   <!-- End Caption -->
@@ -461,7 +508,7 @@
       <div class="heading">
         <h2>Contact Us</h2>
         <p>
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
           blandit aliquet elit, eget tincidunt.
         </p>
       </div>
@@ -495,7 +542,7 @@
     <div class="overlay"></div>
     <div class="container">
       <a href="#" class="logo">
-        <img src="imgs/logo.png" alt="Logo" />
+        <img src="imgs/logo.png" />
       </a>
       <h4>We are social</h4>
       <div class="social">
@@ -504,7 +551,8 @@
         <a href="https://github.com/Philopatire/Kasper-HTML-Template"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>
-      <p class="copyright">&copy; 2021 - <span><a href="https://www.graphberry.com/item/kasper-one-page-psd-template">Kasper</a></span> All Right Reserved</p>
+      <p class="copyright">&copy; 2021 - <span><a
+            href="https://www.graphberry.com/item/kasper-one-page-psd-template">Kasper</a></span> All Right Reserved</p>
     </div>
   </footer>
   <!-- End Footer -->

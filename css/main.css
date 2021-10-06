@@ -223,16 +223,30 @@ nav .links.search i {
 
 /* Header */
 header {
-	background-image: url(../imgs/backgrounds/header-1.jpg);
-	background-size: cover;
 	height: 100vh;
-	position: relative;
 	color: #fff;
+}
+header .slider {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+header .slider img {
+	display: none;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+header .slider img.active {
+	display: block;
 }
 header .text {
 	position: absolute;
 	background-color: var(--main-color-transparent);
-	max-width: 50%;
+	width: 50%;
 	height: 230px;
 	left: 0;
 	top: 50%;
@@ -289,7 +303,7 @@ header .bullet span:hover {
 	border: none;
 	background-color: var(--main-color);
 }
-@media (max-width: 850px) {
+@media (max-width: 991px) {
 	header .text {
 		width: 100%;
 		padding: 40px;
@@ -425,6 +439,9 @@ header .bullet span:hover {
 	overflow: hidden;
 	animation: scaling 0.7s;
 	max-height: 300px;
+}
+.portfolio .imgs .image.hidden {
+	display: none;
 }
 .portfolio .imgs .image img {
 	width: 100%;
@@ -591,7 +608,7 @@ header .bullet span:hover {
 	}
 }
 @media (max-width: 540px) {
-	.about-caption {
+	.about-caption .container {
 		width: 90%;
 	}
 	.about-caption .static {
@@ -955,6 +972,7 @@ header .bullet span:hover {
 		order: -1;
 		text-align: center;
 		margin: 0 auto 40px;
+		width: 100%;
 	}
 	.contact .content form {
 		width: 100%;
